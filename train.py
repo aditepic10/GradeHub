@@ -12,8 +12,6 @@ import os
 dir_path = os.path.dirname(os.path.realpath(__file__))
 csv_dir = dir_path + "\data\student-mat.csv"
 df = pd.read_csv(csv_dir)  # Read in data file as csv into a pandas data frame
-df.head()
-print(df.head())
 t_start = time.perf_counter()
 print(datetime.now())
 # Preliminary transformation of data
@@ -22,7 +20,6 @@ category_colums = df.select_dtypes('object').columns
 for i in category_colums:
     df[i] = enc.fit_transform(df[i])
 
-df.head()
 
 X = df.drop(['school', 'G1', 'G2'], axis=1)  # Remove all grades except for final
 y = df['G3']
@@ -41,7 +38,7 @@ sc = StandardScaler()  # scale to transform data for neural network
 X_train = sc.fit_transform(X_train)  # transform data to be used in neural network
 X_test = sc.transform(X_test)  # transform data to be used in neural network
 
-architecture = (9, 5)  # replace with any architecture
+architecture = (300, 200, 100, 10)  # replace with any architecture
 model = MLPClassifier(solver='lbfgs', learning_rate="adaptive", hidden_layer_sizes=architecture, random_state=1)
 # model = DecisionTreeClassifier()  # Decision tree model
 
