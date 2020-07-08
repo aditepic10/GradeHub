@@ -7,9 +7,13 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.metrics import accuracy_score
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 from datetime import datetime
+import os
 
-df = pd.read_csv("student-mat.csv")  # Read in data file as csv into a pandas data frame
+dir_path = os.path.dirname(os.path.realpath(__file__))
+csv_dir = dir_path + "\data\student-mat.csv"
+df = pd.read_csv(csv_dir)  # Read in data file as csv into a pandas data frame
 df.head()
+print(df.head())
 t_start = time.perf_counter()
 print(datetime.now())
 # Preliminary transformation of data
@@ -37,14 +41,14 @@ sc = StandardScaler()  # scale to transform data for neural network
 X_train = sc.fit_transform(X_train)  # transform data to be used in neural network
 X_test = sc.transform(X_test)  # transform data to be used in neural network
 
-architecture = (1000000000, 5)
+architecture = (9, 5)  # replace with any architecture
 model = MLPClassifier(solver='lbfgs', learning_rate="adaptive", hidden_layer_sizes=architecture, random_state=1)
 # model = DecisionTreeClassifier()  # Decision tree model
 
-print("Preprocessing time: %ss" % (round(time.perf_counter() - t_start, 3)))
-print("Network architecture: %s" % list(architecture))
+print("Preprocessing time: %ss" % (round(time.perf_counter() - t_start, 3)))  # time to preprocess
+print("Network architecture: %s" % list(architecture))  # architecture dims
 t1 = time.perf_counter()
-model.fit(X_train, y_train)
-print("Training time: %ss" % (round(time.perf_counter() - t1, 3)))
-y_predict = model.predict(X_test)
-print("Accuracy on test data (1/3 of original randomly picked): %s" % accuracy_score(y_predict, y_test))
+model.fit(X_train, y_train)  # training multi-layer perceptron
+print("Training time: %ss" % (round(time.perf_counter() - t1, 3))) # training time
+y_predict = model.predict(X_test) # predicting student grade using MLP
+print("Accuracy on test data (1/3 of original randomly picked): %s" % accuracy_score(y_predict, y_test)) # comparing accuracy
