@@ -1,6 +1,3 @@
-<snippet>
-  <content><![CDATA[
-# ${1:Project Name}
 
 
 ## Automation 
