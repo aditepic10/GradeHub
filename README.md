@@ -3,7 +3,7 @@
 # ${1:Project Name}
 
 
-## Grade Hub
+## Automation 
 
 Grade Hub is a multifaceted data compiler that enhances both the learning experiance for students as well as the teaching experiance for instructors. Grade Hub uses machine learning techniques in ways never before seen in the education industry to automate many of the tedius tasks teachers have to complete on a daily basis while also delivering insightful information to students in order to assist them on their joruney of achieving their goals and aspirations. Grade Hub is split into two main componenets and has two main underlying features vital to the education industry and a student's success: Automation and Student Progress Reports
 
