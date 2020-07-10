@@ -20,19 +20,16 @@ for i in category_colums:
     df[i] = enc.fit_transform(df[i])
 
 X = df.drop(['school', 'G1', 'G2'], axis=1)  # Remove all grades except for final
-y = pd.DataFrame(df["G3"], columns=["G3"])  # first = at_risk? second = not_at_risk
-sorted_y = sorted(y["G3"][i] for i in range(len(y)))
-y2_helper = []
+y = df["G3"]  # first = at_risk? second = not_at_risk
+sorted_y = sorted(y[i] for i in range(len(y)))
 for i in range(len(y)):
-    orig = y["G3"][i]  # save original value
+    orig = y[i]  # save original value
     # at-risk defined as percentile < 0.10 (tent.)
-    y["G3"].loc[i] = 1 if (sorted_y.index(y["G3"][i]) / len(sorted_y)) < 0.10 else 0  # 1 = at_risk
-    y2_helper.append(0 if (y["G3"].loc[i] == 1) else 1)  # binary values; opposite of at_risk
+    y.loc[i] = 1 if (sorted_y.index(y[i]) / len(sorted_y)) < 0.10 else 0  # 1 = at_risk
     sorted_y.remove(orig)  # remove original value from sorted list
 
 used_data = {"failures", "Medu", "higher", "age", "Fedu", "goout", "romantic"}  # Labels to be used
 X = X.drop([label for label in X if label not in used_data], axis=1)  # remove all irrelevant labels
-y["G3-2"] = y2_helper  # add new label; complement of first
 # print(y.head)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)  # split train/test data
 sc = StandardScaler()  # scale to transform data for neural network
