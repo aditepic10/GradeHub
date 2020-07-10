@@ -18,7 +18,9 @@ The second component of Grade Hub is the feedback is gives students based on var
 
 
 
-
+]]></content>
+  <tabTrigger>readme</tabTrigger>
+</snippet>
 
 
 
