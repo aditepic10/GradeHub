@@ -1,12 +1,18 @@
-## Welcome to GitHub Pages
+## Welcome to GradeHub
 
-You can use the [editor on GitHub](https://github.com/aditepic10/GradeHub/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+Grade Hub is a **multifaceted data compiler** that enhances both the learning experiance for students as well as the teaching experiance for instructors. Grade Hub uses machine learning techniques in ways never before seen in the education industry to automate many of the tedious tasks teachers have to complete on a daily basis while also delivering insightful information to students in order to assist them on their joruney of achieving their goals and aspirations. Grade Hub is split into two main componenets and has two main underlying features vital to the education industry and a student's success: **Automation** and **Student Progress Reports**.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Automation
 
-### Markdown
+The world is consistenly changing with new technological innovations popping up every day, however, the education industry is still stuck back in the 19th century with teachers still having to manually input grades. We have developed a method to modernize this process by creating a **fully autonomous program** that inputs grades across all platforms teachers use onto one centralized hub. Grade Hub takes data from popular online resources such as Google Classroom and automatically inputs that data based on student identification and grade given on assignment into one platform without intervention from the instructor. Grade Hub also makes paper assignments easier to grade and input onto an online gradebook as it uses image recognition technology to intelligently recognise a student's name and grade on a paper assignment and automatically inputs that data onto the online gradebook used by the local county or state. All the teacher must do is scan the assignment with a camera that has our program embedded underneath and Grade Hub takes care of the rest. Grade Hub allows teachers to save valuable time on inputting grades manually from various sources onto one gradebook by automating this process across various platforms, allowing instructors more time to focus on creating engaging lesson plans for their students or to spend more time with their famalies. 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Student Progress Report
+
+The second component of Grade Hub is the feedback is gives students based on various indicators and progress in the class. Often times, students find themselves lost in balancing their social lives, home lives, and school lives. Grade Hub is desinged to easen this burden on already stressed out students by giving them individualized suggestions on how to meet their goals in school. When a student opens up their gradebook, they will be prompted to answer various questions about their personal life and goals they have with regards to school. Grade Hub will take this data and combine it with previous academic data on the student to provide a plan on how to achieve the goals set by the student at the begning of the year. Grade Hub will then continue to moniter the student's progress throughout the year and will identify at risk or on track students. Based on this data and the data collected at the begining of the school year, Grade Hub will provide suggestions on how to improve the student's grade if the student is at risk of not achieving their goal. This will be done based on what action will help the student the most, whether that is setting up a student-teacher meeting or focusing on certain upcoming assignments to bump their grades. Grade Hub provides an intellegent way to improve the lives of students and help them to achieve their goals.
+
+# Using GradeHub
+
+Currently a work in progress
 
 ```markdown
 Syntax highlighted code block
@@ -26,12 +32,6 @@ Syntax highlighted code block
 [Link](url) and ![Image](src)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/aditepic10/GradeHub/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
 ### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Having trouble with Pages? [Contact us](mailto:aditpareek1@gmail.com) and we’ll help you sort it out.
